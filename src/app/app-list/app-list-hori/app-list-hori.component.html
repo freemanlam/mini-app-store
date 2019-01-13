@@ -1,0 +1,12 @@
+<ng-container *ngIf="loading else appsTpl">
+  <as-app-list-hori-item-ghost *ngFor="let app of ghosts"></as-app-list-hori-item-ghost>
+</ng-container>
+<ng-template #appsTpl>
+  <a *ngFor="let app of apps; trackBy: trackBy"
+     matRipple
+     as-app-list-hori-item
+     [app]="app"
+     [href]="app.link.attributes.href"
+     target="_blank"
+     rel="noopener"></a>
+</ng-template>

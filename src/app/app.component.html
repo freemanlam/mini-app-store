@@ -1,0 +1,25 @@
+<div class="app-content"
+     infiniteScroll
+     [infiniteScrollDistance]="1"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="loadMoreApps()"
+     [fromRoot]="true">
+  <as-search-bar></as-search-bar>
+
+  <ng-container *ngIf="recommendationsLoading || recommendations.length > 0">
+    <h2>推介</h2>
+    <as-app-list-hori [loading]="recommendationsLoading"
+                      [apps]="recommendations">
+    </as-app-list-hori>
+  </ng-container>
+
+  <as-app-list [loading]="topsLoading"
+               [apps]="tops">
+  </as-app-list>
+
+  <div class="app-message"
+       *ngIf=" !recommendationsLoading && !topsLoading && recommendations.length < 1 && tops.length < 1">
+    找不到符合內容
+  </div>
+
+</div>

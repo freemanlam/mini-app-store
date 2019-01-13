@@ -1,0 +1,5 @@
+<input type="text"
+       placeholder="搜尋 App Store"
+       aria-label="搜尋 App Store"
+       [ngModel]="search$ | async"
+       (ngModelChange)="search($event)">

@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  height: 104px;
+
+  &:hover {
+    background: #fafafa;
+  }
+}
+
+.as-app-icon {
+  flex: 0 0 110px;
+}
+
+.app-list-item-rank {
+  flex: 0 0 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.app-list-item-details {
+  flex: 1;
+}
+
+p {
+  margin: 0;
+}

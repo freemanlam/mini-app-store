@@ -1,0 +1,19 @@
+$icon-size: 96px;
+
+.as-app-icon {
+  display: block;
+  width: $icon-size;
+  height: $icon-size;
+}
+
+.as-app-icon-round .as-app-icon-content {
+  border-radius: 50%;
+}
+
+.as-app-icon-content {
+  background: transparent 50% no-repeat;
+  background-size: contain;
+  width: $icon-size;
+  height: $icon-size;
+  border-radius: 20%;
+}

@@ -1,0 +1,16 @@
+<ng-container *ngIf="loading else appsTpl">
+  <as-app-list-item-ghost *ngFor="let app of ghosts; let index = index; let odd = odd"
+                          [rank]="index + 1"
+                          [roundIcon]="odd"></as-app-list-item-ghost>
+</ng-container>
+<ng-template #appsTpl>
+  <a *ngFor="let app of apps; trackBy: trackBy; let index = index; let odd = odd"
+     matRipple
+     as-app-list-item
+     [rank]="index + 1"
+     [app]="app"
+     [roundIcon]="odd"
+     [href]="app.link.attributes.href"
+     target="_blank"
+     rel="noopener"></a>
+</ng-template>
