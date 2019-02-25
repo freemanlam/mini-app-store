@@ -1,4 +1,4 @@
-# driving-route-finder
+# mini-app-store
 
 Demo: [https://dbnvcmvrpauhtyrk.firebaseapp.com/](https://dbnvcmvrpauhtyrk.firebaseapp.com/)
 
